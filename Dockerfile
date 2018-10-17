@@ -1,7 +1,9 @@
-FROM golang:1.6-onbuild
+FROM golang:1.11
 
-RUN go get github.com/appleboy/gofight && go get gopkg.in/appleboy/gofight.v1
+WORKDIR /go/src/app
+COPY . .
 
+RUN go get github.com/appleboy/gofight
 RUN go build && go test
 
 EXPOSE 8484
