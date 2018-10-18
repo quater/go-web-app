@@ -8,4 +8,4 @@ RUN go build && go test
 
 EXPOSE 8484
 
-CMD ["app"]
+CMD ["/go/src/app/app"]
